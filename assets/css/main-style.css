@@ -32,7 +32,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
     --cat-font-color: #44566c;
     --cat-title-color: #212529;
     --cat-white: #ffffff;
-    --cat-primary-color: #cd3131;
+    --cat-primary-color: #3B5A2B;
     --cat-border-color: #efefef;
     --cat-input-border: #efefef;
     --cat-input-bg: #ffffff;
@@ -653,7 +653,7 @@ a.btn-black:active {
 }
 
 .cat-logo-wrapper {
-    width: 100px;
+    width: 80px;
 }
 
 
@@ -1212,7 +1212,8 @@ body .search-field {
 }
 
 .cat-top-dish-info {
-    padding: 16px 20px 14px;
+   min-height: 250px;
+   padding: 20px;
 }
 
 .cat-top-dish-img img {
@@ -1359,6 +1360,7 @@ body .search-field {
     padding: 40px 20px 30px;
     text-align: center;
     border-radius: 10px;
+    min-height:480px;
 }
 
 .cat-service-img {
