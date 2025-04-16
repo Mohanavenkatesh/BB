@@ -1631,7 +1631,7 @@ body .search-field {
     bottom: 0;
     left: 0;
     width: 10px;
-    background-image: url(../images/main/shape.png);
+    /* background-image: url(../images/main/shape.png); */
     background-position: center;
     background-repeat: repeat-y;
     height: 100%;
@@ -1643,7 +1643,7 @@ body .search-field {
     bottom: 0;
     right: 0;
     width: 10px;
-    background-image: url(../images/main/shape.png);
+    /* background-image: url(../images/main/shape.png); */
     background-position: center;
     background-repeat: repeat-y;
     height: 100%;
@@ -2011,7 +2011,7 @@ body .search-field {
     bottom: 0;
     left: 0;
     right: 0;
-    background: hsl(0deg 61% 50% / 60%);
+    /* background: hsl(0deg 61% 50% / 60%); */
     opacity: 0;
     text-align: center;
 }
@@ -2652,7 +2652,7 @@ body .search-field {
 .cat-footer-copyright::before {
     content: "";
     position: absolute;
-    background-image: url(../images/main/shapee.png);
+    /* background-image: url(../images/main/shapee.png); */
     background-repeat: repeat-x;
     background-position: center;
     height: 10px;
