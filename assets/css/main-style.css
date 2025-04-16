@@ -1722,7 +1722,7 @@ body .search-field {
 }
 
 .nav-pills .nav-link {
-    padding: 12px 15px;
+    padding: 12px 11px;
     font-weight: 700;
     position: relative;
     color: var(--cat-primary-color);
