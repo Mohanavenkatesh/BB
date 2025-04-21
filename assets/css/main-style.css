@@ -92,6 +92,10 @@ body::-webkit-scrollbar-thumb {
     width: 500px;
 }
 
+.list-none{
+    list-style: none;
+}
+
 a {
     color: var(--cat-font-color);
 }
