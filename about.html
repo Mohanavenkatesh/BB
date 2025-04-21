@@ -31,11 +31,154 @@ Purchase: http://themeforest.net/user/kamleshyadav
     <title>BB Catering - About Us</title>
 </head>
 
+<style>
+    /* Google Fonts - Poppins */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    .slide-container {
+        max-width: 1120px;
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    .slide-content {
+        margin: 0 40px;
+        overflow: hidden;
+        /* border-radius: 25px; */
+    }
+
+    .image-content,
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
+    }
+
+    .image-content {
+        position: relative;
+        row-gap: 5px;
+        padding: 25px 0;
+    }
+
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #cd3131;
+        border-radius: 25px 25px 0 25px;
+    }
+
+    .overlay::before,
+    .overlay::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -40px;
+        height: 40px;
+        width: 40px;
+        background-color: #cd3131;
+    }
+
+    .overlay::after {
+        border-radius: 0 25px 0 0;
+        background-color: #FFF;
+    }
+
+    .card-image {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background: #FFF;
+        padding: 3px;
+    }
+
+    .card-image .card-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #4070F4;
+    }
+
+    .name {
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #707070;
+        text-align: center;
+    }
+
+    .button {
+        border: none;
+        font-size: 16px;
+        color: #FFF;
+        padding: 8px 16px;
+        background-color: #cd3131;
+        border-radius: 6px;
+        margin: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .button:hover {
+        background: #265DF2;
+    }
+
+    .swiper-navBtn {
+        color: #3B5A2B;
+        transition: color 0.3s ease;
+    }
+
+    .swiper-navBtn:hover {
+        color: #3B5A2B;
+    }
+
+    .swiper-navBtn::before,
+    .swiper-navBtn::after {
+        font-size: 35px;
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #6E93f7;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #4070F4;
+    }
+
+    @media screen and (max-width: 768px) {
+        .slide-content {
+            margin: 0 10px;
+        }
+
+        .swiper-navBtn {
+            display: none;
+        }
+    }
+</style>
+
 <body>
     <!-- Preloader Start -->
     <div class="cat-preloader">
         <div class="cat-preloader-inner">
-            <img src="../assets/images/main/loader.gif" alt="loader">
+            <img src="/assets/images/BB Catering Logo.png" alt="loader">
         </div>
     </div>
 
@@ -63,7 +206,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
                     <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-4">
                         <div class="cat-logo-wrapper">
                             <a href="index.html">
-                                <img src="../assets/images/BB Catering Logo.png" alt="">
+                                <img src="../assets/images/BB Catering Logo.png" class="bb-catering-logo" alt="">
                             </a>
                         </div>
                     </div>
@@ -74,12 +217,13 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                 <ul>
                                     <li class="active">
                                         <a href="index.html">Home</a>
-                                    </li>
+                                    </li>  
+                                     <li><a href="about.html">About Us</a></li>
                                     <li>
                                         <a href="menu.html">Menu</a>
                                     </li>
                                     <li><a href="event.html">Gallery</a></li>
-                                    <li><a href="about.html">About Us</a></li>
+                                 
                                 </ul>
                             </div>
                             <div class="menu-btn-wrap">
@@ -199,6 +343,241 @@ Purchase: http://themeforest.net/user/kamleshyadav
             </div>
         </section>
 
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="cat-heading-wrapper">
+                        <h4>
+                            Offer Zone
+                        </h4>
+                        <h2>
+                            Our Catering Services
+    
+                        </h2>
+                    </div>
+                </div>
+                <div class="slide-container swiper container">
+                    <div class="slide-content">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div class="card swiper-slide">
+                                <div class="cat-top-dish-section">
+                                    <div class="cat-top-dish-inner">
+                                        <div class="cat-top-dish-img">
+                                            <img src="/assets/images/our-catering-services/Wedding.webp" alt="">
+                                        </div>
+                                        <div class="cat-top-dish-info ">
+                                            <a href="javascript:void(0);">
+                                                <h4>Wedding Catering <span></span></h4>
+                                            </a>
+                                            <ul>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                            </ul>
+                                            <div class=" text-dark custom-dots" style="margin-top: 10px;">
+                                                <ul class="custom-dots">
+                                                    <li class="text-dark">&#9679; Traditional Banana Leaf Service</li>
+                                                    <li class="text-dark">&#9679; Buffet & Plated Service</li>
+                                                    <li class="text-dark">&#9679; Live Counters (Dosa, BBQ, Kothu Parotta,
+                                                        etc.)
+                                                    </li>
+                                                    <li class="text-dark">&#9679; Luxury Wedding Catering (Silver Thali, VIP
+                                                        Seating)</li>
+                                                </ul>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="cat-top-dish-section">
+                                    <div class="cat-top-dish-inner">
+                                        <div class="cat-top-dish-img">
+                                            <img src="/assets/images/our-catering-services/Engagement.webp" alt="">
+                                        </div>
+                                        <div class="cat-top-dish-info ">
+                                            <a href="javascript:void(0);">
+                                                <h4>Engagements & Receptions <span></span></h4>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </li>
+                                            </ul>
+                                            <div class="wedding-services-list" style="margin-top: 10px;">
+                                                <ul>
+                                                    <li class="text-dark">&#9679; Customized Food
+                                                        Stations (Live Dosa, Chat Counters, Mocktails)</li>
+                                                    <li class="text-dark">&#9679; Multi-Cuisine Menu (South
+                                                        Indian, North Indian, Continental)</li>
+                                                </ul>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="cat-top-dish-section">
+                                    <div class="cat-top-dish-inner">
+                                        <div class="cat-top-dish-img">
+                                            <img src="/assets/images/our-catering-services/Corparate.webp" alt="">
+                                        </div>
+                                        <div class="cat-top-dish-info ">
+                                            <a href="javascript:void(0);">
+                                                <h4>Corporate Events & Conferences
+                                                    <span></span>
+                                                </h4>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </li>
+                                            </ul>
+                                            <div class="wedding-services-list text-dark" style="margin-top: 10px;">
+                                                <ul>
+                                                    <li class="text-dark">&#9679; Breakfast, Lunch &
+                                                        Dinner Buffets
+                                                    </li>
+                                                    <li class="text-dark">&#9679; Tea & Coffee Break
+                                                        Snacks
+                                                    </li>
+                                                    <li class="text-dark">&#9679; Custom Menus for
+                                                        Business Meetings & Seminars
+                                                    </li>
+                                                </ul>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="cat-top-dish-section">
+                                    <div class="cat-top-dish-inner">
+                                        <div class="cat-top-dish-img">
+                                            <img src="/assets/images/our-catering-services/birthday.webp" alt="">
+                                        </div>
+                                        <div class="cat-top-dish-info ">
+                                            <a href="javascript:void(0);">
+                                                <h4>Birthday & Housewarming Catering
+                                                    <span></span>
+                                                </h4>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </li>
+                                            </ul>
+                                            <div class="wedding-services-list text-dark" style="margin-top: 10px;">
+                                                <ul>
+                                                    <li class="text-dark">&#9679; Mini Tiffin Platters
+                                                    </li>
+                                                    <li class="text-dark">&#9679; Live Chat Counters & BBQ
+                                                        Stations
+                                                    </li>
+                                                    <li class="text-dark">&#9679; Themed Dessert
+                                                        Tables
+                                                    </li>
+                                                </ul>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="cat-top-dish-section">
+                                    <div class="cat-top-dish-inner">
+                                        <div class="cat-top-dish-img">
+                                            <img src="/assets/images/our-catering-services/Festivel.webp" alt="">
+                                        </div>
+                                        <div class="cat-top-dish-info ">
+                                            <a href="javascript:void(0);">
+                                                <h4>Festival & Religious Catering
+                                                    <span></span>
+                                                </h4>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </li>
+                                            </ul>
+                                            <div class="wedding-services-list text-dark" style="margin-top: 10px;">
+                                                <ul>
+                                                    <li class="text-dark">&#9679; Temple Annadanam (Pure
+                                                        Satvik Food, No Onion & Garlic)
+                                                    </li>
+                                                    <li class="text-dark">&#9679; Onam Sadhya, Pongal
+                                                        Feast, Diwali Special Menu
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-navBtn swiper-navBtn-1"></div>
+                    <div class="swiper-button-prev swiper-navBtn swiper-navBtn-2"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
     <!-- Testimonials  -->
     <section class="cat-testimonials-wrapper cat-section-spacer has-bg">
         <div class="container">
@@ -223,19 +602,17 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                             <div class="mlf-testimonials-inner">
                                                 <div class="mlf-testimonials-info">
                                                     <div class="mlf-testimonials">
-                                                        <img src="/assets/images/testimonial/testimonial-1.avif" alt="" />
+                                                        <img src="/assets/images/testimonial/Vignesh & Family.png" alt="" />
                                                         <div>
                                                             <h4>
-                                                                John Brown
+                                                                Vignesh & Family
                                                             </h4>
-                                                            <p>BPO Manager</p>
+                                                            <p>Small Business Owners – Besant Nagar</p>
                                                         </div>
                                                     </div>
 
                                                     <p>
-                                                        There cursus massa at urnaaculis estie. Sed aliquamellus
-                                                        vitae ultrs condmentum leo massa mollis estiegittis miristum
-                                                        nulla sed medy fringilla vitae.
+                                                        The food was absolutely incredible! Every guest at our wedding was raving about the flavors and presentation. Highly recommend!
                                                     </p>
                                                     <div class="cat-rating">
                                                         <ul>
@@ -265,19 +642,17 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                             <div class="mlf-testimonials-inner">
                                                 <div class="mlf-testimonials-info">
                                                     <div class="mlf-testimonials">
-                                                        <img src="/assets/images/testimonial/testimonial-1.avif" alt="" />
+                                                        <img src="/assets/images/testimonial/Lakshmi Narayanan.png" alt="" />
                                                         <div>
                                                             <h4>
-                                                                John Brown
+                                                                Lakshmi Narayanan
                                                             </h4>
-                                                            <p>BPO Manager</p>
+                                                            <p>Homemaker – Thiruvanmiyur</p>
                                                         </div>
                                                     </div>
 
                                                     <p>
-                                                        There cursus massa at urnaaculis estie. Sed aliquamellus
-                                                        vitae ultrs condmentum leo massa mollis estiegittis miristum
-                                                        nulla sed medy fringilla vitae.
+                                                        We hired them for a corporate event and were blown away. Professional, punctual, and the food was next level.
                                                     </p>
                                                     <div class="cat-rating">
                                                         <ul>
@@ -307,19 +682,17 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                             <div class="mlf-testimonials-inner">
                                                 <div class="mlf-testimonials-info">
                                                     <div class="mlf-testimonials">
-                                                        <img src="/assets/images/testimonial/testimonial-1.avif" alt="" />
+                                                        <img src="/assets/images/testimonial/Divya Shanmugam.png" alt="" />
                                                         <div>
                                                             <h4>
-                                                                John Brown
+                                                                Divya Shanmugam
                                                             </h4>
-                                                            <p>BPO Manager</p>
+                                                            <p>School Teacher – Vadapalani</p>
                                                         </div>
                                                     </div>
 
                                                     <p>
-                                                        There cursus massa at urnaaculis estie. Sed aliquamellus
-                                                        vitae ultrs condmentum leo massa mollis estiegittis miristum
-                                                        nulla sed medy fringilla vitae.
+                                                        From start to finish, everything was perfect. The team was so friendly, and the dishes were beautifully crafted.
                                                     </p>
                                                     <div class="cat-rating">
                                                         <ul>
@@ -349,19 +722,17 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                             <div class="mlf-testimonials-inner">
                                                 <div class="mlf-testimonials-info">
                                                     <div class="mlf-testimonials">
-                                                        <img src="/assets/images/testimonial/testimonial-1.avif" alt="" />
+                                                        <img src="/assets/images/testimonial/Karthick.png" alt="" />
                                                         <div>
                                                             <h4>
-                                                                John Brown
+                                                                Karthik R., Event Coordinator
                                                             </h4>
-                                                            <p>BPO Manager</p>
+                                                            <p>HR Manager, IT Company – Guindy </p>
                                                         </div>
                                                     </div>
 
                                                     <p>
-                                                        There cursus massa at urnaaculis estie. Sed aliquamellus
-                                                        vitae ultrs condmentum leo massa mollis estiegittis miristum
-                                                        nulla sed medy fringilla vitae.
+                                                        This catering service made my birthday party unforgettable. Delicious food and a beautiful setup!
                                                     </p>
                                                     <div class="cat-rating">
                                                         <ul>
@@ -391,19 +762,17 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                             <div class="mlf-testimonials-inner">
                                                 <div class="mlf-testimonials-info">
                                                     <div class="mlf-testimonials">
-                                                        <img src="/assets/images/testimonial/testimonial-1.avif" alt="" />
+                                                        <img src="/assets/images/testimonial/Arun&Meena.png" alt="" />
                                                         <div>
                                                             <h4>
-                                                                John Brown
+                                                                Arun & Meena
                                                             </h4>
-                                                            <p>BPO Manager</p>
+                                                            <p>Newlyweds from T. Nagar </p>
                                                         </div>
                                                     </div>
 
                                                     <p>
-                                                        There cursus massa at urnaaculis estie. Sed aliquamellus
-                                                        vitae ultrs condmentum leo massa mollis estiegittis miristum
-                                                        nulla sed medy fringilla vitae.
+                                                        Hands down the best catering experience we’ve ever had. Everything was fresh, flavorful, and right on time.
                                                     </p>
                                                     <div class="cat-rating">
                                                         <ul>
@@ -437,7 +806,6 @@ Purchase: http://themeforest.net/user/kamleshyadav
             </div>
         </div>
     </section>
-    </div>
 
     <footer class="main-footer">
         <div class="cat-footer-wrapper relative">
@@ -767,6 +1135,41 @@ Purchase: http://themeforest.net/user/kamleshyadav
     <script src="../assets/js/swiper.min.js"></script>
     <script src="../assets/js/jquery.mixitup.min.js"></script>
     <script src="../assets/js/main-custom.js"></script>
+
+   <!-- Custom Script -->
+   <script>
+    var swiper = new Swiper(".slide-content", {
+        slidesPerView: 3,
+        spaceBetween: 25,
+        loop: true,
+        centerSlide: true,
+        fade: true,
+        grabCursor: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            520: {
+                slidesPerView: 2,
+            },
+            950: {
+                slidesPerView: 3,
+            },
+        },
+    });
+
+
+</script>
+
 </body>
 
 </html>

@@ -87,6 +87,11 @@ body::-webkit-scrollbar-thumb {
     box-shadow: none;
 }
 
+.bb-catering-logo{
+    height: 80px;
+    width: 500px;
+}
+
 a {
     color: var(--cat-font-color);
 }
