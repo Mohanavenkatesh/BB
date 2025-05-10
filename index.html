@@ -271,12 +271,14 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                     </h1>
                                     <p>Taste of South India Breakfast!</p>
                                     <div class="cat-banner-btn-wrap">
+                                        <a href="./assets/pdf/bb menu design.pdf" target="_blank"
+                                            class="cat-btn btn-black">
+                                            View Menu
+                                        </a>
                                         <a href="#bookNow" class="cat-btn bookNow">
                                             Book Now
                                         </a>
-                                        <a href="about.html" class="cat-btn btn-black">
-                                            Know More
-                                        </a>
+
                                     </div>
 
                                 </div>
@@ -540,6 +542,31 @@ Purchase: http://themeforest.net/user/kamleshyadav
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+    </div>
+
+    <!-- Swiper Slider -->
+    <div class="swiper unique-swiper mb-3">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./assets/images/swipper (1).jpeg" alt="Slide 1">
+            </div>
+            <div class="swiper-slide"><img src="./assets/images/swipper (1).jpg" alt="Slide 2">
+            </div>
+            <div class="swiper-slide"><img src="./assets/images/swipper (1).webp" alt="Slide 3">
+            </div>
+            <div class="swiper-slide"><img src="./assets/images/swipper (2).webp" alt="Slide 3">
+            </div>
+            <div class="swiper-slide"><img src="./assets/images/swipper (3).webp" alt="Slide 3">
+            </div>
+            <div class="swiper-slide"><img src="./assets/images/swipper (4).webp" alt="Slide 3">
+            </div>
+            <div class="swiper-slide"><img src="./assets/images/swipper (5).webp" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- Navigation & Pagination (Scoped to This Slider) -->
+        <!-- <div class="swiper-button-next unique-next"></div>
+        <div class="swiper-button-prev unique-prev"></div> -->
+        <div class="swiper-pagination unique-pagination"></div>
     </div>
 
     <section class="about-us-section py-5" style="background-color: #f9f9f9;">
@@ -1471,6 +1498,11 @@ Purchase: http://themeforest.net/user/kamleshyadav
     <!-- GO To Top -->
     <a href="javascript:void(0);" class="scroll-to-topp"><span class="fa fa-angle-up"></span></a>
 
+    <!-- WhatsApp FAB Icon -->
+    <a href="https://wa.me/1234567890" class="whatsapp-fab" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-white"></i>
+    </a>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -1484,6 +1516,9 @@ Purchase: http://themeforest.net/user/kamleshyadav
     <script src="../assets/js/jquery.mixitup.min.js"></script>
     <script src="../assets/js/main-custom.js"></script>
 
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Custom Script -->
     <script>
@@ -1517,6 +1552,25 @@ Purchase: http://themeforest.net/user/kamleshyadav
         });
 
 
+    </script>
+
+    <!-- Swiper Initialization Script -->
+    <script>
+        const uniqueSwiper = new Swiper('.unique-swiper', {
+            loop: true,
+            pagination: {
+                el: '.unique-pagination',
+                clickable: true,
+            },
+            // navigation: {
+            //     nextEl: '.unique-next',
+            //     prevEl: '.unique-prev',
+            // },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+        });
     </script>
 </body>
 
